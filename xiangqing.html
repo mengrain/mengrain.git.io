@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script>
+    window.onload = function () {
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+    window.onresize = function () {
+       document.documentElement.style.fontSize = document.documentElement.clientWidth / 640*100 +'px'
+    }
+}
+    </script>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body>
+<header>
+    <img src="img/fh.png" alt="" class="img_1">
+    <div>
+      <img src="img/sc.png" alt="" class="img_2">
+      <span>39</span>
+    </div>
+    <img src="img/zf.png" alt="" class="img_3">
+</header>
+<div class="content">
+    <!-- <img src="img/t3.jpg" alt=""> -->
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script>
+  var id=window.location.href.split("=")[1];
+  console.log(id)
+  $.ajax({
+    url:"http://localhost:8000/list",
+    type:"POST",
+    data:{
+      id:id
+    },
+    success:function(data){
+      console.log(data)
+
+
+
+    
+    
+      $(".content").append("<img src='"+data.img+"' alt='' />")
+      
+      // $(".banner").append(str)
+      
+
+    }
+  })
+
+
+
+
+
+</script>

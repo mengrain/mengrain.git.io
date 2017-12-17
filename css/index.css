@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wyy-header{
+	width: 90%;
+	margin: 0 auto;
+}
+.wyy-header span{
+	display:block; 
+	float:left;
+	margin:7% 7% 7% 0; 
+	font-size:0.16rem;
+}
+.img-1{
+	float:right;
+	margin:7% 0; 
+}
+.box{
+	width: 100%;
+}
+.box-1 img{
+	width: 100%;
+	height:100%;
+}
+.box1{
+	width: 100%;
+}
+.box1-1,.box1-2{
+	width: 90%;
+	margin: 0 auto;
+}
+.box1-1 img{
+	width: 100%;
+}
+.box1-2 h4{
+	font-size:0.2rem;
+}
+.box1-2 p{
+	font-size:0.14rem;
+	margin-top:0.3rem; 
+}
+.tp{
+	width: 100%;
+}
+.tp img{
+	width: 100%;
+	float: left;
+}
+.box3-1{
+	width: 90%;
+	margin: 0 auto;
+}
+.box3-1 input{
+	width: 100%;
+	line-height: 0.8rem;
+	font-size:0.3rem;
+}
+.input-1{
+	height:1.5rem; 
+}
+button{
+	background-color:black;
+	width:1rem;
+	height: 1rem;
+	float:right;
+	color:window;
+	border:none;
+}
+.footer{
+	width: 100%;
+	background-color:black;
+	margin-top:1rem; 
+}
+.footer-1{
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+.footer-1 h4{
+	font-size:0.4rem;
+	color:window;
+}
+.footer-1 p{
+	font-size:0.2rem;
+	color:window;
+}

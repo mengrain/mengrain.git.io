@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script>
+    window.onload = function () {
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+    window.onresize = function () {
+       document.documentElement.style.fontSize = document.documentElement.clientWidth / 640*100 +'px'      
+    }
+}
+    </script>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<header class="wyy-header">
+  <span><img src="https://static.wixstatic.com/media/72a44c1b3b7c450287b9f4dd21be1548.png/v1/fill/w_33,h_33,al_c,usm_0.66_1.00_0.01/72a44c1b3b7c450287b9f4dd21be1548.png" alt=""></span>
+  <span><img src="https://static.wixstatic.com/media/e1a85976534f42c1a09d3bff23646ba2.png/v1/fill/w_33,h_33,al_c,usm_0.66_1.00_0.01/e1a85976534f42c1a09d3bff23646ba2.png" alt=""></span>
+  <span><img src="https://static.wixstatic.com/media/51595f20831643d4b785234fa63218d1.png/v1/fill/w_33,h_33,al_c,usm_0.66_1.00_0.01/51595f20831643d4b785234fa63218d1.png" alt=""></span>
+  <span><img src="https://static.wixstatic.com/media/d7c95bf7ba7e424d9d590123e67ea834.png/v1/fill/w_33,h_33,al_c,usm_0.66_1.00_0.01/d7c95bf7ba7e424d9d590123e67ea834.png" alt="">
+  </span>
+  <img src="img/tt1.png" alt="" class="img-1">
+</header>
+<div class="box">
+<div class="box-1"><img src="img/t1.png" alt=""></div>
+</div>
+<div class="box1">
+<div class="box1-1">
+  <img src="img/t2.png" alt="">
+</div>
+<div class="box1-2">
+  <h4>About me</h4>
+  <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+  <p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company.</p>
+  <p>Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+</div>
+<div class="tp">
+
+</div>
+<div class="box1-2">
+  <h4>Let's talk</h4>
+  <p>500 Terry Francois St.</p>
+  <p>San Francisco, CA 94158</p>
+  <p>Tel: 123-456-7890</p>
+  <p>info@mysite.com</p>
+</div>
+<div class="box3-1">
+  <input type="text" placeholder="名字">
+  <input type="text" placeholder="邮箱">
+  <input type="text" placeholder="主旨">
+  <input type="text" class="input-1">
+  <button>send</button>
+</div>
+<div class="tp">
+<a href="#"><img src="img/t5.jpg" alt=""></a>
+</div>
+</div>
+<div class="footer">
+<div class="footer-1">
+<a href="#"><img src="img/tt2.png" alt=""></a>
+<h4>Back to Top</h4>
+<p>@2023 by Charlotte McCoy. Proudly created with wix.com</p>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+  $.ajax({
+    
+    url:"http://localhost:8000/cha",
+    type:"POST",
+    success:function(data){
+      console.log(data)
+      var data=eval("("+data+")")
+      console.log(data)
+      var str="";
+      for(i in data){
+        str+=`<a href="xiangqing.html?id=${data[i].id}"><img src="${data[i].img}" alt=""></a>`
+      }
+      $(".tp").append(str)
+    }
+  })
+</script>
